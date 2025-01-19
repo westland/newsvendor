@@ -29,7 +29,7 @@ generate_cauchy_demand <- function(n = 50,
 }
 
 ###############################################################################
-# (C) KAPLAN–MEIER FUNCTIONS (Similar to the original code)
+# (C) KAPLAN???MEIER FUNCTIONS (Similar to the original code)
 ###############################################################################
 km_fit <- function(time, event) {
   survfit(Surv(time, event) ~ 1, type = "kaplan-meier")
@@ -247,10 +247,10 @@ compute_eoq <- function(demands, b, g, ordering_cost) {
 # scale in {10,100,1000},
 # n_sims=30, n_periods=50
 ###############################################################################
-b_vals     <- c(0,1,2)
-g_vals     <- c(0,1,2)
+b_vals     <- c(1,2)
+g_vals     <- c(1,2)
 loc_par    <- 100
-scale_vals <- c(10,100,1000)
+scale_vals <- c(100,1000)
 
 n_sims    <- 30
 n_periods <- 50
@@ -355,6 +355,7 @@ for (i in seq_len(nrow(param_grid))) {
     )
     
     all_results <- rbind(all_results, row_out)
+    print(all_results)
   }
 }
 
@@ -364,3 +365,4 @@ write.csv(all_results, file = "newsvendor_cauchy_results.csv", row.names = FALSE
 ###############################################################################
 # END
 ###############################################################################
+
