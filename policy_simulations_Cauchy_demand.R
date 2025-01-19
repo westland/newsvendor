@@ -355,7 +355,7 @@ for (i in seq_len(nrow(param_grid))) {
     )
     
     all_results <- rbind(all_results, row_out)
-    print(all_results)
+
   }
 }
 
