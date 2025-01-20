@@ -250,7 +250,7 @@ compute_eoq <- function(demands, b, g, ordering_cost) {
 b_vals     <- c(1,2)
 g_vals     <- c(1,2)
 loc_par    <- 100
-scale_vals <- c(10,100,1000)
+scale_vals <- c(100,100,1000)
 
 n_sims    <- 30
 n_periods <- 50
